@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Lock, Eye, EyeOff, LogIn } from "lucide-react";
 import { LilyFlower } from "@/components/ui/SacredArtwork";
 
-export default function AdminLoginPage() {
+function AdminLoginForm() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -116,5 +116,23 @@ export default function AdminLoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function LoginFallback() {
+  return (
+    <div className="min-h-screen bg-creme dark:bg-dark-bg flex items-center justify-center p-4">
+      <div className="w-full max-w-md text-center">
+        <span className="w-8 h-8 border-2 border-dourado/30 border-t-dourado rounded-full animate-spin inline-block" />
+      </div>
+    </div>
+  );
+}
+
+export default function AdminLoginPage() {
+  return (
+    <Suspense fallback={<LoginFallback />}>
+      <AdminLoginForm />
+    </Suspense>
   );
 }
