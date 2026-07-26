@@ -1,0 +1,241 @@
+[
+  {
+    "id": 1,
+    "slug": "a-presenca-de-cristo-nos-encontros-de-jovens",
+    "title": "A Presen�a de Cristo nos Encontros de Jovens",
+    "summary": "Descubra como o EJC transforma vidas através da experiência viva de Cristo, levando jovens a uma fé mais profunda e autêntica.",
+    "content": "O Encontro de Jovens com Cristo é muito mais do que um evento religioso. É uma experiência transformadora que toca o coração e muda vidas. Cada retiro é cuidadosamente preparado para criar um ambiente de acolhimento, oração e descoberta espiritual...",
+    "author": "Pe. João Carlos Silva",
+    "authorRole": "Assistente Espiritual",
+    "category": "Espiritualidade",
+    "tags": [
+      "Cristo",
+      "Fé",
+      "Jovens",
+      "Transformação"
+    ],
+    "readTime": 5,
+    "publishedAt": "2026-07-20",
+    "image": "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1200&auto=format&fit=crop",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "slug": "liturgia-e-sua-importancia-na-vida-dos-jovens",
+    "title": "A Liturgia e Sua Importância na Vida dos Jovens",
+    "summary": "Como a participação ativa na liturgia pode fortalecer a fé e a comunidade entre os jovens católicos.",
+    "content": "A liturgia é o coração pulsante da Igreja Católica. Para os jovens, participar ativamente das celebrações litúrgicas é uma forma poderosa de aprofundar sua relação com Deus e com a comunidade eclesial...",
+    "author": "Ana Beatriz Oliveira",
+    "authorRole": "Coordenadora de Liturgia",
+    "category": "Liturgia",
+    "tags": [
+      "Liturgia",
+      "Missa",
+      "Sacramento",
+      "Comunidade"
+    ],
+    "readTime": 7,
+    "publishedAt": "2026-07-18",
+    "image": "https://images.unsplash.com/photo-1548625361-186f87452d3a?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "slug": "testemunho-minha-vida-apos-o-ejc",
+    "title": "Testemunho: Minha Vida Após o EJC",
+    "summary": "João Paulo compartilha como o Encontro de Jovens com Cristo transformou completamente sua visão de vida e fé.",
+    "content": "Antes do EJC, eu estava perdido. Não sabia o que queria da vida, meu relacionamento com Deus era superficial e eu me sentia vazio por dentro. Quando meu amigo me convidou para o encontro, fui por curiosidade...",
+    "author": "João Paulo Ferreira",
+    "authorRole": "Ex-participante, atual dirigente",
+    "category": "Testemunhos",
+    "tags": [
+      "Testemunho",
+      "Conversão",
+      "Vida Nova"
+    ],
+    "readTime": 10,
+    "publishedAt": "2026-07-15",
+    "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "slug": "nossa-senhora-do-carmo-padroeira-do-ejc",
+    "title": "Nossa Senhora do Carmo: Padroeira e Guia do EJC",
+    "summary": "Conheça a história e a espiritualidade mariana que inspira o movimento EJC e a devoção à Flor do Carmelo.",
+    "content": "Nossa Senhora do Carmo é venerada há séculos como a protetora e mãe espiritual de todos que se dedicam à vida contemplativa e à busca de Deus. O escapulário carmelita, símbolo desta devoção...",
+    "author": "Ir. Maria Teresa",
+    "authorRole": "Coordenadora de Espiritualidade",
+    "category": "Santos",
+    "tags": [
+      "Maria",
+      "Carmo",
+      "Devoção",
+      "Espiritualidade"
+    ],
+    "readTime": 8,
+    "publishedAt": "2026-07-12",
+    "image": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "slug": "formacao-integral-do-jovem-cristao",
+    "title": "Formação Integral do Jovem Cristão",
+    "summary": "Como o EJC contribui para a formação humana, espiritual e apostólica dos jovens católicos de hoje.",
+    "content": "A formação integral é um dos pilares fundamentais do EJC. Não basta apenas ter momentos de emoção espiritual; é necessário construir uma fé sólida, baseada no conhecimento da doutrina católica e na prática cotidiana das virtudes...",
+    "author": "Carlos Eduardo Santos",
+    "authorRole": "Diretor de Formação",
+    "category": "Formação",
+    "tags": [
+      "Formação",
+      "Catequese",
+      "Doutrina",
+      "Virtudes"
+    ],
+    "readTime": 6,
+    "publishedAt": "2026-07-10",
+    "image": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "slug": "iii-ejc-paroquia-nossa-senhora-do-carmo",
+    "title": "III EJC Paróquia Nossa Senhora do Carmo – Inscrições Abertas",
+    "summary": "O aguardado III Encontro de Jovens com Cristo da Paróquia Nossa Senhora do Carmo está com inscrições abertas. Não perca!",
+    "content": "É com grande alegria e muita gratidão a Deus que anunciamos a abertura das inscrições para o III EJC da Paróquia Nossa Senhora do Carmo! Este será um fim de semana inesquecível de fé, amizade e transformação...",
+    "author": "Coordenação EJC",
+    "authorRole": "Equipe de Comunicação",
+    "category": "Eventos",
+    "tags": [
+      "EJC",
+      "Inscrições",
+      "Retiro",
+      "Encontro"
+    ],
+    "readTime": 3,
+    "publishedAt": "2026-07-08",
+    "image": "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1200&auto=format&fit=crop",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "slug": "adoracao-eucaristica-porta-do-ceu",
+    "title": "Adoração Eucarística: A Porta do Céu na Terra",
+    "summary": "Entenda a riqueza espiritual da Adoração Eucarística e como essa prática pode transformar sua vida de oração.",
+    "content": "A Adoração Eucarística é um dos tesouros mais preciosos da espiritualidade católica. Estar na presença do Santíssimo Sacramento é estar diante do próprio Jesus Cristo, verdadeiro Deus e verdadeiro homem...",
+    "author": "Pe. João Carlos Silva",
+    "authorRole": "Assistente Espiritual",
+    "category": "Espiritualidade",
+    "tags": [
+      "Eucaristia",
+      "Adoração",
+      "Oração",
+      "Santos"
+    ],
+    "readTime": 9,
+    "publishedAt": "2026-07-05",
+    "image": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "slug": "aviso-reuniao-equipes-agosto",
+    "title": "Aviso: Reunião Geral das Equipes – Agosto 2026",
+    "summary": "Convocamos todos os membros das equipes do EJC para a reunião geral de preparação do III Encontro.",
+    "content": "Caros irmãos e irmãs do EJC, informamos que a Reunião Geral das Equipes será realizada no dia 10 de agosto de 2026, às 19h, no salão paroquial. A presença de todos é fundamental...",
+    "author": "Coordenação EJC",
+    "authorRole": "Equipe de Comunicação",
+    "category": "Avisos",
+    "tags": [
+      "Reunião",
+      "Equipes",
+      "Aviso",
+      "Organização"
+    ],
+    "readTime": 2,
+    "publishedAt": "2026-07-03",
+    "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "slug": "sao-joao-da-cruz-doutor-da-alma",
+    "title": "São João da Cruz: Doutor da Alma e Mestre da Oração",
+    "summary": "Conheça a vida e o legado do grande místico carmelita, padroeiro dos contemplativos e modelo de amor a Deus.",
+    "content": "São João da Cruz, nascido Juan de Yepes Álvarez em 1542, em Fontiveros, Espanha, é um dos maiores místicos da história do Cristianismo. Sua vida foi marcada por um amor apaixonado a Deus e por uma busca incansável da união divina...",
+    "author": "Ir. Maria Teresa",
+    "authorRole": "Coordenadora de Espiritualidade",
+    "category": "Santos",
+    "tags": [
+      "São João da Cruz",
+      "Mística",
+      "Carmelitas",
+      "Oração"
+    ],
+    "readTime": 12,
+    "publishedAt": "2026-06-28",
+    "image": "https://images.unsplash.com/photo-1548625361-186f87452d3a?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "slug": "musica-liturgica-louvor-ao-senhor",
+    "title": "Música Litúrgica: O Louvor que Eleva a Alma",
+    "summary": "Como a música litúrgica autêntica contribui para a experiência de Deus durante as celebrações e retiros.",
+    "content": "Desde os primeiros cristãos, o canto e a música sempre foram elementos centrais na celebração da fé. 'Quem canta, reza duas vezes', dizia Santo Agostinho, e essa sabedoria ressoa até hoje nos encontros e missas do EJC...",
+    "author": "Marcos Andrade",
+    "authorRole": "Coordenador de Música",
+    "category": "Liturgia",
+    "tags": [
+      "Música",
+      "Louvor",
+      "Liturgia",
+      "Cantos"
+    ],
+    "readTime": 6,
+    "publishedAt": "2026-06-25",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "slug": "retiro-de-silencio-encontrando-deus-no-interior",
+    "title": "Retiro de Silêncio: Encontrando Deus no Interior",
+    "summary": "Uma reflexão sobre a importância do silêncio e da contemplação para a vida espiritual do jovem cristão moderno.",
+    "content": "Em um mundo cada vez mais barulhento e cheio de distrações, o silêncio tornou-se um bem precioso e raro. Para os jovens do EJC, os retiros de silêncio são oportunidades únicas de desacelerar, escutar e encontrar Deus no fundo do coração...",
+    "author": "Ana Beatriz Oliveira",
+    "authorRole": "Coordenadora de Liturgia",
+    "category": "Espiritualidade",
+    "tags": [
+      "Retiro",
+      "Silêncio",
+      "Contemplação",
+      "Meditação"
+    ],
+    "readTime": 8,
+    "publishedAt": "2026-06-20",
+    "image": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "slug": "o-papel-da-familia-na-formacao-da-fe",
+    "title": "O Papel da Família na Formação da Fé",
+    "summary": "A família como primeira escola de fé: como os pais podem contribuir para o desenvolvimento espiritual dos filhos.",
+    "content": "O Concílio Vaticano II chamou a família de 'Igreja Doméstica', reconhecendo seu papel fundamental na transmissão da fé. Para os jovens que participam do EJC, muitas vezes é a família que planta as primeiras sementes da fé...",
+    "author": "Carlos Eduardo Santos",
+    "authorRole": "Diretor de Formação",
+    "category": "Formação",
+    "tags": [
+      "Família",
+      "Fé",
+      "Educação",
+      "Igreja"
+    ],
+    "readTime": 7,
+    "publishedAt": "2026-06-15",
+    "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop",
+    "featured": false
+  }
+]

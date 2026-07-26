@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "date": "2026-08-03",
+    "time": "19:30",
+    "title": "Reunião Geral das Equipes",
+    "description": "Reunião de preparação para o III EJC. Presença obrigatória para todos os membros das equipes.",
+    "location": "Salão Paroquial",
+    "type": "Reunião",
+    "color": "carmelo"
+  },
+  {
+    "id": 2,
+    "date": "2026-08-07",
+    "time": "20:00",
+    "title": "Adoração Eucarística Mensal",
+    "description": "Nossa adoração eucarística mensal aberta a toda a comunidade jovem.",
+    "location": "Igreja Nossa Senhora do Carmo",
+    "type": "Adoração",
+    "color": "dourado"
+  },
+  {
+    "id": 3,
+    "date": "2026-08-10",
+    "time": "19:00",
+    "title": "Missa dos Jovens",
+    "description": "Celebração eucarística especial para os jovens do movimento. Música ao vivo.",
+    "location": "Igreja Nossa Senhora do Carmo",
+    "type": "Missa",
+    "color": "dourado"
+  },
+  {
+    "id": 4,
+    "date": "2026-08-15",
+    "time": "09:00",
+    "title": "Retiro de Espiritualidade",
+    "description": "Retiro de um dia com momentos de oração, silêncio e partilha. Vagas limitadas.",
+    "location": "Casa de Retiro São José",
+    "type": "Retiro",
+    "color": "bege"
+  },
+  {
+    "id": 5,
+    "date": "2026-08-17",
+    "time": "19:30",
+    "title": "Ensaio Geral – Equipe de Música",
+    "description": "Ensaio geral para o III EJC. Todos os músicos devem estar presentes.",
+    "location": "Sala de Música – Paróquia",
+    "type": "Reunião",
+    "color": "carmelo"
+  },
+  {
+    "id": 6,
+    "date": "2026-08-22",
+    "time": "19:00",
+    "title": "III EJC – Início (Sexta-Feira)",
+    "description": "Início oficial do III Encontro de Jovens com Cristo. Abertura e acolhida.",
+    "location": "Paróquia Nossa Senhora do Carmo",
+    "type": "EJC",
+    "color": "dourado"
+  },
+  {
+    "id": 7,
+    "date": "2026-08-23",
+    "time": "08:00",
+    "title": "III EJC – Sábado",
+    "description": "Dia completo de formação, adoração, celebrações e partilha.",
+    "location": "Paróquia Nossa Senhora do Carmo",
+    "type": "EJC",
+    "color": "dourado"
+  },
+  {
+    "id": 8,
+    "date": "2026-08-24",
+    "time": "08:00",
+    "title": "III EJC – Encerramento (Domingo)",
+    "description": "Último dia: Missa solene, renovação de promessas e envio dos retirantes.",
+    "location": "Paróquia Nossa Senhora do Carmo",
+    "type": "EJC",
+    "color": "dourado"
+  },
+  {
+    "id": 9,
+    "date": "2026-09-05",
+    "time": "19:30",
+    "title": "Reunião Pós-EJC – Feedback",
+    "description": "Reunião de avaliação e celebração do III EJC com todas as equipes.",
+    "location": "Salão Paroquial",
+    "type": "Reunião",
+    "color": "carmelo"
+  },
+  {
+    "id": 10,
+    "date": "2026-09-12",
+    "time": "20:00",
+    "title": "Formação: Espiritualidade Carmelita",
+    "description": "Tarde de formação sobre a espiritualidade do Carmelo com a Ir. Maria Teresa.",
+    "location": "Salão Paroquial",
+    "type": "Formação",
+    "color": "bege"
+  }
+]

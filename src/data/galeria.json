@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "type": "foto",
+    "category": "Encontros",
+    "src": "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1200&auto=format&fit=crop",
+    "thumbnail": "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=1200&auto=format&fit=crop",
+    "title": "Momento de Adoração – II EJC",
+    "description": "Jovens reunidos em oração e contemplação durante a adoração eucarística",
+    "date": "2025-09-15",
+    "width": 800,
+    "height": 600
+  },
+  {
+    "id": 2,
+    "type": "foto",
+    "category": "Missas",
+    "src": "https://images.unsplash.com/photo-1548625361-186f87452d3a?q=80&w=1200&auto=format&fit=crop",
+    "thumbnail": "https://images.unsplash.com/photo-1548625361-186f87452d3a?q=80&w=1200&auto=format&fit=crop",
+    "title": "Missa de Encerramento – I EJC",
+    "description": "Celebração eucarística solene presidida com toda a comunidade paroquial",
+    "date": "2024-08-18",
+    "width": 800,
+    "height": 1000
+  },
+  {
+    "id": 3,
+    "type": "foto",
+    "category": "Encontros",
+    "src": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop",
+    "thumbnail": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop",
+    "title": "Equipes do II EJC",
+    "description": "União e fraternidade entre todos os membros das equipes do movimento",
+    "date": "2025-09-17",
+    "width": 1200,
+    "height": 600
+  },
+  {
+    "id": 4,
+    "type": "foto",
+    "category": "Retiros",
+    "src": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop",
+    "thumbnail": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop",
+    "title": "Retiro de Silêncio 2025",
+    "description": "Momento de escuta profunda da Palavra e silêncio interior no Carmelo",
+    "date": "2025-06-20",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "id": 5,
+    "type": "foto",
+    "category": "Missas",
+    "src": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?q=80&w=1200&auto=format&fit=crop",
+    "thumbnail": "https://images.unsplash.com/photo-1543807535-eceef0bc6599?q=80&w=1200&auto=format&fit=crop",
+    "title": "Missa dos Jovens – Agosto 2025",
+    "description": "Celebração vibrante com a participação da Equipe de Música EJC",
+    "date": "2025-08-10",
+    "width": 800,
+    "height": 600
+  },
+  {
+    "id": 6,
+    "type": "foto",
+    "category": "Encontros",
+    "src": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop",
+    "thumbnail": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop",
+    "title": "Louvor e Animação no I EJC",
+    "description": "Alegria e louvor no altar durante a abertura oficial",
+    "date": "2024-08-16",
+    "width": 800,
+    "height": 600
+  }
+]

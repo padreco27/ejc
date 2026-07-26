@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "III EJC – Paróquia Nossa Senhora do Carmo",
+    "date": "2026-08-22",
+    "endDate": "2026-08-24",
+    "city": "Campo Grande",
+    "state": "MS",
+    "parish": "Paróquia Nossa Senhora do Carmo – PNSC",
+    "address": "Rua das Flores, 123 – Bairro Centro",
+    "spots": 80,
+    "spotsAvailable": 23,
+    "price": 0,
+    "description": "O aguardado III Encontro de Jovens com Cristo da Paróquia Nossa Senhora do Carmo promete ser um fim de semana inesquecível de fé, transformação e comunhão. Venha viver essa experiência!",
+    "theme": "Cristo Vive em Mim",
+    "chaplain": "Pe. João Carlos Silva",
+    "image": "/images/eventos/ejc-principal.jpg",
+    "featured": true,
+    "registrationOpen": true,
+    "registrationDeadline": "2026-08-15"
+  }
+]

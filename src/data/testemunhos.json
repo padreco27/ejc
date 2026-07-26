@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Maria Eduarda",
+    "age": 22,
+    "city": "Campo Grande, MS",
+    "ejcEdition": "I EJC – 2024",
+    "text": "O EJC foi o maior presente que Deus me deu. Entrei no encontro com o coração pesado e saí completamente renovada. A experiência de sentir o amor de Cristo de forma tão real e tangível é algo que não tenho palavras para descrever. Hoje faço parte da equipe e quero que outros jovens vivam o que vivi.",
+    "avatar": "/images/testemunhos/maria.jpg",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Pedro Henrique",
+    "age": 25,
+    "city": "Dourados, MS",
+    "ejcEdition": "II EJC – 2025",
+    "text": "Cheguei ao EJC como um jovem que mal ia à missa. Saí com um coração apaixonado por Jesus e pela Igreja. O encontro não mudou apenas minha vida espiritual, mas todos os meus relacionamentos, minha família, meu trabalho. Cristo realmente vive!",
+    "avatar": "/images/testemunhos/pedro.jpg",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Juliana Matos",
+    "age": 20,
+    "city": "Três Lagoas, MS",
+    "ejcEdition": "I EJC – 2024",
+    "text": "Nunca vou esquecer o momento da adoração eucarística no EJC. Foi como se o tempo parasse e eu pudesse finalmente escutar Deus falar comigo. Uma experiência indescritível que mudou completamente minha relação com a fé.",
+    "avatar": "/images/testemunhos/juliana.jpg",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Thiago Andrade",
+    "age": 23,
+    "city": "Corumbá, MS",
+    "ejcEdition": "II EJC – 2025",
+    "text": "O EJC me ajudou a entender que ser católico não é apenas ir à missa. É um estilo de vida, uma forma de amar a Deus e ao próximo. As amizades que fiz no encontro são algumas das melhores da minha vida.",
+    "avatar": "/images/testemunhos/thiago.jpg",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "name": "Isabela Nascimento",
+    "age": 19,
+    "city": "Campo Grande, MS",
+    "ejcEdition": "II EJC – 2025",
+    "text": "Entrei no EJC sem expectativas e saí transformada. O amor e o acolhimento que recebi das equipes me fizeram sentir que realmente pertencia àquele lugar. Nossa Senhora do Carmo abriu meu coração para Cristo.",
+    "avatar": "/images/testemunhos/isabela.jpg",
+    "rating": 5
+  }
+]

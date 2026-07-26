@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "O que é o EJC?",
+    "answer": "O EJC (Encontro de Jovens com Cristo) é um movimento de evangelização da Igreja Católica voltado para jovens entre 15 e 35 anos. Por meio de um fim de semana de retiro, os jovens são convidados a ter uma experiência pessoal e transformadora com Jesus Cristo."
+  },
+  {
+    "id": 2,
+    "question": "Quem pode participar do EJC?",
+    "answer": "Jovens de 15 a 35 anos, independentemente de sua situação espiritual atual. O EJC é acolhedor e recebe tanto jovens que já têm uma vida de fé ativa quanto aqueles que estão afastados da Igreja ou que têm dúvidas sobre a fé."
+  },
+  {
+    "id": 3,
+    "question": "Quanto custa participar do EJC?",
+    "answer": "O EJC da nossa paróquia é completamente gratuito! Todo o custo é coberto pela venda dos produtos da Loja Solidária e por doações dos membros da comunidade. Acreditamos que nenhum jovem deve deixar de viver essa experiência por questões financeiras."
+  },
+  {
+    "id": 4,
+    "question": "O que acontece durante o EJC?",
+    "answer": "O EJC acontece ao longo de um fim de semana (sexta à noite até domingo à tarde). Durante esse período, os participantes vivem momentos de oração, adoração eucarística, celebrações, partilhas em grupos, testemunhos de vida, música e uma convivência profunda com outros jovens."
+  },
+  {
+    "id": 5,
+    "question": "Preciso ser católico para participar?",
+    "answer": "O EJC é um movimento católico, mas recebemos com muito amor jovens de qualquer situação espiritual. Se você tem curiosidade sobre a fé ou está em busca de Deus, o EJC pode ser exatamente o que você precisa."
+  },
+  {
+    "id": 6,
+    "question": "O que devo levar para o EJC?",
+    "answer": "Roupas confortáveis para o fim de semana, pertences pessoais de higiene, documentos, roupas adequadas para os momentos litúrgicos (nada muito curto ou decotado), e principalmente um coração aberto. A lista completa é enviada após a confirmação da inscrição."
+  },
+  {
+    "id": 7,
+    "question": "Como posso fazer parte da equipe do EJC?",
+    "answer": "Após participar do EJC como retirante, você pode ser convidado a fazer parte de uma das equipes do movimento. O processo começa com um período de formação e discernimento junto à coordenação. Entre em contato conosco para saber mais."
+  },
+  {
+    "id": 8,
+    "question": "Como posso apoiar o EJC financeiramente?",
+    "answer": "Você pode apoiar o EJC comprando produtos da nossa Loja Solidária, fazendo doações via PIX ou contribuindo com materiais e alimentos. Todo recurso arrecadado é destinado à realização do encontro, permitindo que ele seja gratuito para os participantes."
+  }
+]

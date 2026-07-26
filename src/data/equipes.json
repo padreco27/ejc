@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "name": "Coordenação Geral",
+    "slug": "coordenacao",
+    "description": "A equipe de coordenação é responsável por planejar, organizar e coordenar todas as atividades do EJC. São os responsáveis por garantir que tudo aconteça com excelência e de acordo com o espírito do movimento.",
+    "coordinator": "Lucas Mendonça",
+    "coordinatorRole": "Coordenador Geral",
+    "members": 6,
+    "image": "/images/equipes/coordenacao.jpg",
+    "icon": "Crown"
+  },
+  {
+    "id": 2,
+    "name": "Dirigentes",
+    "slug": "dirigentes",
+    "description": "Os dirigentes são jovens que já passaram pelo EJC e se colocam a serviço para conduzir os participantes através de toda a experiência do encontro, compartilhando seus testemunhos e guiando os momentos.",
+    "coordinator": "Gabriela Souza",
+    "coordinatorRole": "Coordenadora dos Dirigentes",
+    "members": 15,
+    "image": "/images/equipes/dirigentes.jpg",
+    "icon": "Users"
+  },
+  {
+    "id": 3,
+    "name": "Secretaria",
+    "slug": "secretaria",
+    "description": "A equipe de secretaria cuida de toda a parte administrativa do encontro: inscrições, documentação, organização de listas e apoio logístico à coordenação.",
+    "coordinator": "Patrícia Lima",
+    "coordinatorRole": "Secretária Geral",
+    "members": 4,
+    "image": "/images/equipes/secretaria.jpg",
+    "icon": "FileText"
+  },
+  {
+    "id": 4,
+    "name": "Liturgia",
+    "slug": "liturgia",
+    "description": "A equipe de liturgia prepara e anima todos os momentos de oração, celebrações sacramentais e adoração eucarística durante o encontro, garantindo um ambiente de reverência e espiritualidade.",
+    "coordinator": "Ana Beatriz Oliveira",
+    "coordinatorRole": "Coordenadora de Liturgia",
+    "members": 8,
+    "image": "/images/equipes/liturgia.jpg",
+    "icon": "BookOpen"
+  },
+  {
+    "id": 5,
+    "name": "Música",
+    "slug": "musica",
+    "description": "A equipe de música é responsável por conduzir os momentos de louvor e adoração, selecionando e executando cantos que elevam a alma e criam um ambiente de encontro com Deus.",
+    "coordinator": "Marcos Andrade",
+    "coordinatorRole": "Coordenador de Música",
+    "members": 10,
+    "image": "/images/equipes/musica.jpg",
+    "icon": "Music"
+  },
+  {
+    "id": 6,
+    "name": "Intercessão",
+    "slug": "intercessao",
+    "description": "A equipe de intercessão ora continuamente durante todo o encontro, intercedendo por cada participante, pelos dirigentes, pelo sacerdote e por todas as intenções apresentadas.",
+    "coordinator": "Ir. Maria Teresa",
+    "coordinatorRole": "Coordenadora de Intercessão",
+    "members": 7,
+    "image": "/images/equipes/intercessao.jpg",
+    "icon": "Heart"
+  },
+  {
+    "id": 7,
+    "name": "Acolhida",
+    "slug": "acolhida",
+    "description": "A equipe de acolhida é o primeiro contato que os participantes têm ao chegar ao encontro. São responsáveis por criar um ambiente acolhedor, caloroso e de pertencimento desde o primeiro momento.",
+    "coordinator": "Fernanda Costa",
+    "coordinatorRole": "Coordenadora de Acolhida",
+    "members": 8,
+    "image": "/images/equipes/acolhida.jpg",
+    "icon": "Home"
+  },
+  {
+    "id": 8,
+    "name": "Ornamentação",
+    "slug": "ornamentacao",
+    "description": "A equipe de ornamentação transforma os espaços físicos em ambientes sagrados e acolhedores, utilizando flores, velas, tecidos e elementos que criam uma atmosfera propícia ao encontro com Deus.",
+    "coordinator": "Beatriz Rodrigues",
+    "coordinatorRole": "Coordenadora de Ornamentação",
+    "members": 6,
+    "image": "/images/equipes/ornamentacao.jpg",
+    "icon": "Flower"
+  },
+  {
+    "id": 9,
+    "name": "Comunicação",
+    "slug": "comunicacao",
+    "description": "A equipe de comunicação cuida da divulgação do movimento nas redes sociais, produção de conteúdo, fotografia e registro de todos os momentos especiais do encontro.",
+    "coordinator": "Rafael Carvalho",
+    "coordinatorRole": "Coordenador de Comunicação",
+    "members": 5,
+    "image": "/images/equipes/comunicacao.jpg",
+    "icon": "Camera"
+  },
+  {
+    "id": 10,
+    "name": "Cozinha",
+    "slug": "cozinha",
+    "description": "A equipe da cozinha é o coração que sustenta o encontro. Com muito amor e dedicação, prepara as refeições que nutrem e fortalecem cada participante durante o fim de semana.",
+    "coordinator": "Dona Rosa Santos",
+    "coordinatorRole": "Coordenadora da Cozinha",
+    "members": 12,
+    "image": "/images/equipes/cozinha.jpg",
+    "icon": "ChefHat"
+  },
+  {
+    "id": 11,
+    "name": "Apoio",
+    "slug": "apoio",
+    "description": "A equipe de apoio é responsável por toda a infraestrutura do encontro: transporte, montagem, manutenção dos espaços, segurança e suporte logístico geral.",
+    "coordinator": "Roberto Alves",
+    "coordinatorRole": "Coordenador de Apoio",
+    "members": 9,
+    "image": "/images/equipes/apoio.jpg",
+    "icon": "Wrench"
+  }
+]
