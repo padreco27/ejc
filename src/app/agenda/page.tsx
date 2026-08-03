@@ -1,16 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Calendar as CalendarIcon, Clock, MapPin, Tag, Filter } from "lucide-react";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations/FadeIn";
-import agendaData from "@/data/agenda.json";
 import { formatDate } from "@/lib/utils";
+
+interface EventItem {
+  id: number;
+  date: string;
+  time: string;
+  title: string;
+  description: string;
+  location: string;
+  type: string;
+  color: string;
+}
 
 const eventTypes = ["Todos", "Missa", "Reunião", "Adoração", "Retiro", "Formação", "EJC"];
 
 export default function AgendaPage() {
   const [selectedType, setSelectedType] = useState("Todos");
+  const [agendaData, setAgendaData] = useState<EventItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/agenda")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar agenda");
+        return res.json();
+      })
+      .then((data) => setAgendaData(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   const filteredEvents = agendaData.filter((evt) =>
     selectedType === "Todos" ? true : evt.type === selectedType

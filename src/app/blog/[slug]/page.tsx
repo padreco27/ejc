@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, User, Calendar, Tag, Share2, Heart } from "lucide-react";
-import blogData from "@/data/blog.json";
 import { formatDate } from "@/lib/utils";
+import { getItemBySlug, getItems } from "@/lib/db";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -10,13 +10,14 @@ interface PageProps {
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = blogData.find((p) => p.slug === slug);
+  const post = await getItemBySlug("blog", slug);
 
   if (!post) {
     notFound();
   }
 
-  const related = blogData.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 2);
+  const allPosts = await getItems("blog");
+  const related = allPosts.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 2);
 
   return (
     <article className="pt-28 md:pt-36 pb-20 bg-[#F6EFE3] dark:bg-[#1C1008] min-h-screen">

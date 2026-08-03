@@ -1,17 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Image as ImageIcon, Video, Calendar, Filter, Maximize2 } from "lucide-react";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations/FadeIn";
-import galeriaData from "@/data/galeria.json";
 import { formatDate } from "@/lib/utils";
+
+interface GalleryItem {
+  id: number;
+  type: string;
+  category: string;
+  src: string;
+  thumbnail: string;
+  title: string;
+  description: string;
+  date: string;
+  width: number;
+  height: number;
+}
 
 const categories = ["Todos", "Encontros", "Missas", "Retiros"];
 
 export default function GaleriaPage() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
-  const [lightboxItem, setLightboxItem] = useState<(typeof galeriaData)[0] | null>(null);
+  const [lightboxItem, setLightboxItem] = useState<GalleryItem | null>(null);
+  const [galeriaData, setGaleriaData] = useState<GalleryItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/galeria")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar galeria");
+        return res.json();
+      })
+      .then((data) => setGaleriaData(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   const filteredItems = galeriaData.filter((item) =>
     selectedCategory === "Todos" ? true : item.category === selectedCategory

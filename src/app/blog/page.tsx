@@ -1,12 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Search, Clock, User, ArrowRight, Tag } from "lucide-react";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations/FadeIn";
-import blogData from "@/data/blog.json";
 import { formatDate } from "@/lib/utils";
+
+interface BlogPost {
+  id: number;
+  slug: string;
+  title: string;
+  summary: string;
+  author: string;
+  category: string;
+  readTime: number;
+  publishedAt: string;
+  image: string;
+  featured: boolean;
+}
 
 const categories = [
   "Todos",
@@ -20,8 +32,22 @@ const categories = [
 ];
 
 export default function BlogPage() {
+  const [blogData, setBlogData] = useState<BlogPost[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/blog")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar artigos");
+        return res.json();
+      })
+      .then((data) => setBlogData(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   const filteredPosts = blogData.filter((post) => {
     const matchesCategory =

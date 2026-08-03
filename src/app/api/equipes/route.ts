@@ -2,13 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { createItem, deleteItem, getItems, updateItem } from "@/lib/db";
 
 export async function GET() {
-  const data = await getItems("produtos");
+  const data = await getItems("equipes");
   return NextResponse.json(data);
 }
 
 export async function POST(request: NextRequest) {
   const payload = await request.json();
-  const item = await createItem("produtos", payload);
+  const item = await createItem("equipes", payload);
   return NextResponse.json(item, { status: 201 });
 }
 
@@ -18,7 +18,7 @@ export async function PUT(request: NextRequest) {
   if (!id) {
     return NextResponse.json({ error: "ID é obrigatório" }, { status: 400 });
   }
-  const updated = await updateItem("produtos", id, rest);
+  const updated = await updateItem("equipes", id, rest);
   return NextResponse.json(updated);
 }
 
@@ -28,6 +28,6 @@ export async function DELETE(request: NextRequest) {
   if (!id) {
     return NextResponse.json({ error: "ID é obrigatório" }, { status: 400 });
   }
-  await deleteItem("produtos", id);
+  await deleteItem("equipes", id);
   return NextResponse.json({ success: true });
 }

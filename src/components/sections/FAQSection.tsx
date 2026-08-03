@@ -1,13 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
-import faqData from "@/data/faq.json";
+
+interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
 
 export default function FAQSection() {
   const [openId, setOpenId] = useState<number | null>(1);
+  const [faqData, setFaqData] = useState<FAQItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/faq")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar FAQ");
+        return res.json();
+      })
+      .then((data) => setFaqData(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   const toggle = (id: number) => {
     setOpenId((prev) => (prev === id ? null : id));
@@ -56,7 +75,7 @@ export default function FAQSection() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
                       >
                         <div className="px-6 pb-6 pt-2 text-[#5A3925] dark:text-[#C9A46A]/80 text-sm leading-relaxed border-t border-[#F6EFE3] dark:border-[#3D2618]">
                           {item.answer}

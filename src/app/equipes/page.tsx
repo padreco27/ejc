@@ -1,11 +1,21 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Crown, Users, FileText, BookOpen, Music, Heart, Home, Flower, Camera, ChefHat, Wrench
 } from "lucide-react";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations/FadeIn";
-import equipesData from "@/data/equipes.json";
+
+interface EquipeItem {
+  id: number;
+  name: string;
+  description: string;
+  members: number;
+  coordinator: string;
+  coordinatorRole: string;
+  icon: string;
+}
 
 const iconMap: Record<string, any> = {
   Crown,
@@ -22,6 +32,21 @@ const iconMap: Record<string, any> = {
 };
 
 export default function EquipesPage() {
+  const [equipesData, setEquipesData] = useState<EquipeItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/equipes")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar equipes");
+        return res.json();
+      })
+      .then((data) => setEquipesData(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
     <div className="pt-28 md:pt-36 pb-20 bg-[#F6EFE3] dark:bg-[#1C1008] min-h-screen">
       {/* Header */}

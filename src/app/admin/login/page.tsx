@@ -2,10 +2,11 @@
 
 import { Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Lock, Eye, EyeOff, LogIn } from "lucide-react";
+import { Lock, Mail, Eye, EyeOff, LogIn } from "lucide-react";
 import { LilyFlower } from "@/components/ui/SacredArtwork";
 
 function AdminLoginForm() {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -22,7 +23,7 @@ function AdminLoginForm() {
       const res = await fetch("/api/admin/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ email, password }),
       });
 
       const data = await res.json();
@@ -69,6 +70,21 @@ function AdminLoginForm() {
 
           <div>
             <label className="block text-sm font-semibold text-carmelo dark:text-bege mb-2">
+              E-mail de Administrador
+            </label>
+            <div className="relative mb-4">
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted" />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="seu@exemplo.com"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-border dark:border-dark-border bg-creme dark:bg-dark-bg text-carmelo dark:text-bege focus:outline-none focus:ring-2 focus:ring-dourado/50 transition-all"
+                autoFocus
+              />
+            </div>
+
+            <label className="block text-sm font-semibold text-carmelo dark:text-bege mb-2">
               Senha de Administrador
             </label>
             <div className="relative">
@@ -79,7 +95,6 @@ function AdminLoginForm() {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Digite a senha"
                 className="w-full pl-10 pr-10 py-3 rounded-xl border border-border dark:border-dark-border bg-creme dark:bg-dark-bg text-carmelo dark:text-bege focus:outline-none focus:ring-2 focus:ring-dourado/50 transition-all"
-                autoFocus
               />
               <button
                 type="button"
@@ -93,7 +108,7 @@ function AdminLoginForm() {
 
           <button
             type="submit"
-            disabled={loading || !password}
+            disabled={loading || !email || !password}
             className="w-full flex items-center justify-center gap-2 bg-dourado hover:bg-dourado-dark text-white font-semibold py-3 px-6 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-dourado/20"
           >
             {loading ? (

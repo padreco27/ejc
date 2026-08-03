@@ -1,17 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
-import testemunhosData from "@/data/testemunhos.json";
+
+interface TestimonialItem {
+  id: number;
+  name: string;
+  age: number;
+  city: string;
+  ejcEdition: string;
+  rating: number;
+  text: string;
+}
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
+  const [testimonials, setTestimonials] = useState<TestimonialItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  const prev = () => setCurrent((c) => (c === 0 ? testemunhosData.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === testemunhosData.length - 1 ? 0 : c + 1));
-  const testimonial = testemunhosData[current];
+  useEffect(() => {
+    fetch("/api/testemunhos")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar depoimentos");
+        return res.json();
+      })
+      .then((data) => setTestimonials(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+  const testimonial = testimonials[current] ?? {
+    id: 0,
+    name: "",
+    age: 0,
+    city: "",
+    ejcEdition: "",
+    rating: 0,
+    text: "",
+  };
 
   return (
     <section
@@ -40,7 +71,7 @@ export default function TestimonialsSection() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.2 }}
               className="bg-white dark:bg-[#2A1910] rounded-2xl p-8 md:p-12 border border-[#D4B896] dark:border-[#4A3020] text-center"
             >
               {/* Quote icon */}
@@ -84,7 +115,7 @@ export default function TestimonialsSection() {
               <ChevronLeft className="w-5 h-5" />
             </button>
             <div className="flex gap-2">
-              {testemunhosData.map((_, i) => (
+              {testimonials.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}

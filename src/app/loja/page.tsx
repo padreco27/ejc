@@ -1,22 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, Heart, Check, X, Copy, Filter, Sparkles, Calendar, CheckSquare } from "lucide-react";
 import { FadeIn, StaggerChildren, StaggerItem } from "@/components/animations/FadeIn";
 import { LilyFlower, CarmelEmblem, DevotionalBadge } from "@/components/ui/SacredArtwork";
-import produtosData from "@/data/produtos.json";
 import { formatCurrency } from "@/lib/utils";
+
+interface Product {
+  id: number;
+  slug: string;
+  name: string;
+  price: number;
+  description: string;
+  shortDescription: string;
+  sizes: string[];
+  colors: string[];
+  category: string;
+  inStock: boolean;
+  quantity: number;
+  image: string;
+  images: string[];
+  featured: boolean;
+  badge: string | null;
+}
 
 const categories = ["Todos", "Vestuário", "Devocionais", "Utilidades", "Livros", "Acessórios"];
 
 export default function LojaPage() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
   const [favorites, setFavorites] = useState<number[]>([]);
-  const [selectedProduct, setSelectedProduct] = useState<(typeof produtosData)[0] | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [copiedPix, setCopiedPix] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(false);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/produtos")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar produtos");
+        return res.json();
+      })
+      .then((data) => setProducts(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   const toggleFavorite = (id: number, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -25,7 +56,7 @@ export default function LojaPage() {
     );
   };
 
-  const filteredProducts = produtosData.filter((p) =>
+  const filteredProducts = products.filter((p) =>
     selectedCategory === "Todos" ? true : p.category === selectedCategory
   );
 

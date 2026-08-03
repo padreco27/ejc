@@ -5,8 +5,24 @@ import { motion } from "framer-motion";
 import { Calendar, MapPin, Users, Clock, ChevronRight, Sparkles } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { useCountdown } from "@/hooks/useCountdown";
-import eventosData from "@/data/eventos.json";
+import { useEffect, useState } from "react";
 import { formatDate } from "@/lib/utils";
+
+interface EventItem {
+  id: number;
+  title: string;
+  theme: string;
+  description: string;
+  date: string;
+  endDate: string;
+  parish: string;
+  city: string;
+  state: string;
+  spots: number;
+  spotsAvailable: number;
+  chaplain: string;
+  image: string;
+}
 
 function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
@@ -24,11 +40,51 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
 }
 
 export default function NextEncounterSection() {
-  const event = eventosData[0];
-  const timeLeft = useCountdown(event.date + "T19:00:00");
-  const spotsPercent = Math.round(
-    ((event.spots - event.spotsAvailable) / event.spots) * 100
-  );
+  const [event, setEvent] = useState<EventItem | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/eventos")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar próximos encontros");
+        return res.json();
+      })
+      .then((data) => setEvent(data[0] ?? null))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const timeLeft = useCountdown((event?.date ?? new Date().toISOString()) + "T19:00:00");
+  const spotsPercent = event ? Math.round(((event.spots - event.spotsAvailable) / event.spots) * 100) : 0;
+
+  if (loading) {
+    return (
+      <section
+        id="encontro"
+        className="section-padding bg-[#3D2618] dark:bg-[#1C1008] relative overflow-hidden text-[#E8D6B8]"
+      >
+        <div className="container-custom relative z-10 text-center">
+          <div className="text-xl md:text-2xl font-bold mb-4">Carregando próximo encontro...</div>
+          <p className="text-[#E8D6B8]/80">Aguarde enquanto buscamos as informações mais recentes.</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !event) {
+    return (
+      <section
+        id="encontro"
+        className="section-padding bg-[#3D2618] dark:bg-[#1C1008] relative overflow-hidden text-[#E8D6B8]"
+      >
+        <div className="container-custom relative z-10 text-center">
+          <div className="text-3xl font-bold mb-4">Próximo encontro indisponível</div>
+          <p className="text-[#E8D6B8]/80">{error || "No momento não há eventos cadastrados."}</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -119,7 +175,7 @@ export default function NextEncounterSection() {
                     initial={{ width: 0 }}
                     whileInView={{ width: `${spotsPercent}%` }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                   />
                 </div>
               </div>

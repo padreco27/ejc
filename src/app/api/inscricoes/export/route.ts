@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { readData } from "@/lib/data-utils";
+import { getItems } from "@/lib/db";
 import * as XLSX from "xlsx";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,7 +34,7 @@ function formatInscricao(item: any) {
 }
 
 export async function GET() {
-  const data = await readData("inscricoes.json");
+  const data = await getItems("inscricoes");
   const formatted = data.map(formatInscricao);
 
   const wb = XLSX.utils.book_new();

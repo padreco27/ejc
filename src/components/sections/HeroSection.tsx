@@ -12,7 +12,7 @@ export default function HeroSection() {
         <img
           src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=2000&auto=format&fit=crop"
           alt="Jovens reunidos em oração"
-          className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
+          className="w-full h-full object-cover object-center scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#1C1008] via-[#3D2618]/85 to-[#5A3925]/70 backdrop-brightness-75" />
       </div>
@@ -38,7 +38,7 @@ export default function HeroSection() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.25, delay: 0 }}
           className="font-display font-bold text-5xl sm:text-7xl lg:text-9xl text-white leading-tight mb-6 tracking-tight drop-shadow-2xl"
         >
           Cristo{" "}
@@ -51,7 +51,7 @@ export default function HeroSection() {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.25, delay: 0.1 }}
           className="text-xl md:text-3xl text-[#E8D6B8]/90 max-w-3xl mx-auto mb-10 leading-relaxed font-display italic drop-shadow"
         >
           &ldquo;Venha viver um encontro que transforma vidas.&rdquo;
@@ -61,7 +61,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.25, delay: 0.15 }}
           className="filigree-ornament mb-10"
         >
           <span>✦ ✝ ✦</span>
@@ -71,7 +71,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.25, delay: 0.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <Link
@@ -94,7 +94,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.1 }}
+          transition={{ duration: 0.4, delay: 0.25 }}
           className="mt-16 grid grid-cols-3 gap-6 max-w-xl mx-auto p-6 rounded-2xl bg-[#1C1008]/60 backdrop-blur-md border border-[#B68A4B]/20 shadow-2xl"
         >
           {[

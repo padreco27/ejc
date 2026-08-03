@@ -1,10 +1,26 @@
 import { cookies } from "next/headers";
+import { supabaseAdmin, hasSupabase } from "@/lib/supabase";
 
 const SESSION_COOKIE = "ejc_admin";
-const DEFAULT_PASSWORD = "ejc@admin2026";
 
-export function getAdminPassword(): string {
-  return process.env.ADMIN_PASSWORD || DEFAULT_PASSWORD;
+export async function verifyAdminCredentials(email: string, password: string) {
+  if (!hasSupabase || !supabaseAdmin) {
+    return {
+      success: false,
+      message: "Supabase não está configurado. Não é possível autenticar.",
+    };
+  }
+
+  const { data, error } = await supabaseAdmin.auth.signInWithPassword({
+    email,
+    password,
+  });
+
+  if (error || !data.session) {
+    return { success: false, message: error?.message || "Credenciais inválidas" };
+  }
+
+  return { success: true, session: data.session, user: data.user };
 }
 
 export async function createSession(): Promise<void> {

@@ -1,26 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readData, writeData } from "@/lib/data-utils";
-
-const FILE = "inscricoes.json";
+import { createItem, deleteItem, getItems, updateItem } from "@/lib/db";
 
 export async function GET() {
-  const data = await readData(FILE);
+  const data = await getItems("inscricoes");
   return NextResponse.json(data);
 }
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  const data = await readData(FILE);
-  const maxId = data.reduce((max, item) => Math.max(max, item.id), 0);
-  const newItem = {
+  const item = await createItem("inscricoes", {
     ...body,
-    id: maxId + 1,
     createdAt: new Date().toISOString(),
     status: "Confirmada",
-  };
-  data.push(newItem);
-  await writeData(FILE, data);
-  return NextResponse.json(newItem, { status: 201 });
+  });
+  return NextResponse.json(item, { status: 201 });
 }
 
 export async function PUT(request: NextRequest) {
@@ -29,14 +22,8 @@ export async function PUT(request: NextRequest) {
   if (!id) {
     return NextResponse.json({ error: "ID é obrigatório" }, { status: 400 });
   }
-  const data = await readData(FILE);
-  const index = data.findIndex((item) => item.id === id);
-  if (index === -1) {
-    return NextResponse.json({ error: "Item não encontrado" }, { status: 404 });
-  }
-  data[index] = { ...data[index], ...rest };
-  await writeData(FILE, data);
-  return NextResponse.json(data[index]);
+  const updated = await updateItem("inscricoes", id, rest);
+  return NextResponse.json(updated);
 }
 
 export async function DELETE(request: NextRequest) {
@@ -45,12 +32,6 @@ export async function DELETE(request: NextRequest) {
   if (!id) {
     return NextResponse.json({ error: "ID é obrigatório" }, { status: 400 });
   }
-  const data = await readData(FILE);
-  const index = data.findIndex((item) => item.id === id);
-  if (index === -1) {
-    return NextResponse.json({ error: "Item não encontrado" }, { status: 404 });
-  }
-  data.splice(index, 1);
-  await writeData(FILE, data);
+  await deleteItem("inscricoes", id);
   return NextResponse.json({ success: true });
 }

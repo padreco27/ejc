@@ -63,12 +63,12 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
     <>
       <motion.nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-200",
           navBg
         )}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
       >
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -121,7 +121,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.15 }}
                           className="absolute top-full left-0 mt-2 w-64 bg-[#F6EFE3] dark:bg-[#2A1910] rounded-xl shadow-2xl border border-[#D4B896] dark:border-[#4A3020] overflow-hidden"
                         >
                           {item.children.map((child) => (
@@ -210,7 +210,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
             className="fixed inset-0 z-40 bg-[#F6EFE3] dark:bg-[#1C1008] pt-20 overflow-y-auto lg:hidden"
           >
             <div className="container-custom py-6 space-y-1">
