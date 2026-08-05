@@ -1,5 +1,6 @@
 import { readData, writeData } from "@/lib/data-utils";
 import { supabaseAdmin, hasSupabase } from "@/lib/supabase";
+import type { SupabaseClient } from "@supabase/supabase-js";
 
 export type TableName =
   | "blog"
@@ -12,7 +13,7 @@ export type TableName =
   | "faq"
   | "testemunhos";
 
-function assertSupabaseAdmin() {
+function assertSupabaseAdmin(): asserts supabaseAdmin is SupabaseClient {
   if (!supabaseAdmin) {
     throw new Error("Supabase não está configurado.");
   }
