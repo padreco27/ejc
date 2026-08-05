@@ -83,7 +83,7 @@ export async function getItemBySlug<T = any>(table: TableName, slug: string): Pr
 export async function createItem<T = any>(table: TableName, payload: unknown): Promise<T> {
   if (hasSupabase) {
     assertSupabaseAdmin(supabaseAdmin);
-    const response = await supabaseAdmin.from(table).insert(payload).select().single();
+    const response = await supabaseAdmin.from(table).insert(payload as object).select().single();
     if (response.error) {
       throw response.error;
     }
@@ -103,7 +103,7 @@ export async function updateItem<T = any>(table: TableName, id: number, payload:
     assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin
       .from(table)
-      .update(payload)
+      .update(payload as object)
       .eq("id", id)
       .select()
       .single();
@@ -125,7 +125,7 @@ export async function updateItem<T = any>(table: TableName, id: number, payload:
 
 export async function deleteItem(table: TableName, id: number): Promise<void> {
   if (hasSupabase) {
-    assertSupabaseAdmin();
+    assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin.from(table).delete().eq("id", id);
     if (response.error) {
       throw response.error;
