@@ -8,15 +8,31 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+interface BlogPost {
+  id: number;
+  slug: string;
+  title: string;
+  summary: string;
+  content: string;
+  author: string;
+  authorRole: string;
+  category: string;
+  tags: string[];
+  readTime: number;
+  publishedAt: string;
+  image: string;
+  featured: boolean;
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = await getItemBySlug("blog", slug);
+  const post = await getItemBySlug<BlogPost>("blog", slug);
 
   if (!post) {
     notFound();
   }
 
-  const allPosts = await getItems("blog");
+  const allPosts = await getItems<BlogPost>("blog");
   const related = allPosts.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 2);
 
   return (
