@@ -13,8 +13,8 @@ export type TableName =
   | "faq"
   | "testemunhos";
 
-function assertSupabaseAdmin(): asserts supabaseAdmin is SupabaseClient {
-  if (!supabaseAdmin) {
+function assertSupabaseAdmin(value: SupabaseClient | null): asserts value is SupabaseClient {
+  if (!value) {
     throw new Error("Supabase não está configurado.");
   }
 }
@@ -41,7 +41,7 @@ async function writeFallback(table: TableName, data: unknown[]) {
 
 export async function getItems<T = any>(table: TableName): Promise<T[]> {
   if (hasSupabase) {
-    assertSupabaseAdmin();
+    assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin.from(table).select("*").order("id", { ascending: true });
     if (response.error) {
       throw response.error;
@@ -54,7 +54,7 @@ export async function getItems<T = any>(table: TableName): Promise<T[]> {
 
 export async function getItemById<T = any>(table: TableName, id: number): Promise<T | null> {
   if (hasSupabase) {
-    assertSupabaseAdmin();
+    assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin.from(table).select("*").eq("id", id).single();
     if (response.error && response.status !== 406) {
       throw response.error;
@@ -68,7 +68,7 @@ export async function getItemById<T = any>(table: TableName, id: number): Promis
 
 export async function getItemBySlug<T = any>(table: TableName, slug: string): Promise<T | null> {
   if (hasSupabase) {
-    assertSupabaseAdmin();
+    assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin.from(table).select("*").eq("slug", slug).single();
     if (response.error && response.status !== 406) {
       throw response.error;
@@ -82,7 +82,7 @@ export async function getItemBySlug<T = any>(table: TableName, slug: string): Pr
 
 export async function createItem<T = any>(table: TableName, payload: unknown): Promise<T> {
   if (hasSupabase) {
-    assertSupabaseAdmin();
+    assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin.from(table).insert(payload).select().single();
     if (response.error) {
       throw response.error;
@@ -100,7 +100,7 @@ export async function createItem<T = any>(table: TableName, payload: unknown): P
 
 export async function updateItem<T = any>(table: TableName, id: number, payload: unknown): Promise<T> {
   if (hasSupabase) {
-    assertSupabaseAdmin();
+    assertSupabaseAdmin(supabaseAdmin);
     const response = await supabaseAdmin
       .from(table)
       .update(payload)
